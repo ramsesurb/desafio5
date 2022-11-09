@@ -1,0 +1,23 @@
+
+h1(class="text-center text-danger") Productos
+if productos == ""
+    br
+    h3 No hay ningún producto agregado.
+else
+    div(class="table-responsive")  
+    table(class="table table-danger")
+        thead
+            tr
+               
+                th(scope="col") Name
+                th(scope="col") Price
+                th(scope="col") thumbnail 
+        tbody
+            each prod in productos
+                tr(class="text-primary")
+                   
+                    td= prod.tittle
+                    td= prod.price 
+                    td
+                        img(src=prod.thumbnail, width="50")
+        
